@@ -1432,6 +1432,14 @@ minio:
   storage:
     volumeClaimValue: 500Mi
 
+  resources:
+    requests:
+      memory: "1024Mi"
+      cpu: "200m"
+    limits:
+      memory: "1024Mi"
+      cpu: "200m"
+
   # -- Node labels for pod assignment, see https://kubernetes.io/docs/user-guide/node-selection/
   ##
   nodeSelector: {}

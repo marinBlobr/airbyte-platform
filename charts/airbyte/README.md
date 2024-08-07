@@ -238,6 +238,10 @@ Helm chart to deploy airbyte
 | minio.image.repository | string | `"minio/minio"` | Minio image used by Minio helm chart                                                                                                                                    |
 | minio.image.tag | string | `"RELEASE.2023-11-20T22-40-07Z"` | Minio tag image                                                                                                                                                         |
 | minio.nodeSelector | object | `{}` | Node labels for pod assignment, see https://kubernetes.io/docs/user-guide/node-selection/ #                                                                             |
+| minio.resources.requests.memory | string | `"1024Mi"` | Amount of memory requested for Minio |
+| minio.resources.requests.cpu | string | `"200m"` | Amount of CPU requested for Minio |
+| minio.resources.limits.memory | string | `"1024Mi"` | Maximum amount of memory Minio can use |
+| minio.resources.limits.cpu | string | `"200m"` | Maximum amount of CPU Minio can use |
 | minio.storage.volumeClaimValue | string | `"500Mi"` |                                                                                                                                                                         |
 | minio.tolerations | list | `[]` | Tolerations for minio pod assignment, see https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/ #                                                     |
 | nameOverride | string | `""` | String to partially override airbyte.fullname template with a string (will prepend the release name)                                                                    |

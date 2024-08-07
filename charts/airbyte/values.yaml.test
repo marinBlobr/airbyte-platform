@@ -1408,6 +1408,14 @@ minio:
   storage:
     volumeClaimValue: 500Mi
 
+  resources:
+    requests:
+      memory: "1024Mi"
+      cpu: "200m"
+    limits:
+      memory: "1024Mi"
+      cpu: "200m"
+
 cron:
   enabled: true
   ##  cron.replicaCount Number of cron replicas
